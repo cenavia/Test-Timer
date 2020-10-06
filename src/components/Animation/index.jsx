@@ -7,7 +7,7 @@ import {VibracionAnimation} from './styles';
 const Animation = props => {
     return (
         <VibracionAnimation>
-            <DashboardOutlined style={{ fontSize: '50px' }}/>
+            <DashboardOutlined style={{ fontSize: '60px' }}/>
         </VibracionAnimation>
     );
 };
