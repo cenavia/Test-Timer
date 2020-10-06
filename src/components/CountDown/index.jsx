@@ -9,12 +9,12 @@ import {
     ButtonReset,
     ButtonStop
 } from './styles';
+import Animation from '../Animation/index';
 
 class CountDown extends Component {
 
   state = {
     timerOn: false,
-    animateOn: false,
     timerStart: 0,
     timerTime: 0
   };
@@ -122,9 +122,12 @@ class CountDown extends Component {
 
         {(timerOn === false || timerTime < 1000) &&
           (timerStart !== timerTime && timerStart > 0) && (
-            <ButtonReset onClick={this.resetTimer}>
-              Reset
-            </ButtonReset>
+            <div>
+              <ButtonReset onClick={this.resetTimer}>
+                Reset
+              </ButtonReset>
+              <Animation/>
+            </div>
           )}
       </Countdown>
     );

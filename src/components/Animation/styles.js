@@ -5,9 +5,7 @@ import styled from 'styled-components'
 
 export const VibracionAnimation = styled.div`
     margin-top: 2em;
-    :hover{
-        animation: vibracion 1s infinite;
-    }
+    animation: vibracion 1s infinite;
     @keyframes vibracion{
         10%, 30%, 50%, 70%, 90% {
         transform: translateX(-10px);
