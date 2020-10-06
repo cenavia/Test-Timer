@@ -88,3 +88,8 @@ export const ButtonStop  = styled.button`
         background-color: #106ba3;
     }
 `;
+
+export const CountdownTime  = styled.div`
+    font-size: 36px;
+    margin: 5px 0;
+`;

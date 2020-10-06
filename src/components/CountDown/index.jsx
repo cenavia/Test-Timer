@@ -7,7 +7,8 @@ import {
     Button,
     ButtonStart,
     ButtonReset,
-    ButtonStop
+    ButtonStop,
+    CountdownTime
 } from './styles';
 import Animation from '../Animation/index';
 
@@ -88,9 +89,9 @@ class CountDown extends Component {
             &#8679;
           </Button>
 
-          <div className="Countdown-time">
+          <CountdownTime>
             {hours} : {minutes} : {seconds}
-          </div>
+          </CountdownTime>
 
           <Button onClick={() => this.adjustTimer("decHours")}>&#8681;</Button>
           <Button onClick={() => this.adjustTimer("decMinutes")}>
