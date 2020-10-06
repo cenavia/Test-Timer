@@ -14,6 +14,7 @@ import Animation from '../Animation/index';
 
 class CountDown extends Component {
 
+  // Estado inical de la aplicacion.
   state = {
     timerOn: false,
     timerStart: 0,
@@ -38,11 +39,12 @@ class CountDown extends Component {
       }
     }, 10);
   };
-
+  // funcion que detiene la cuanta regresiva.
   stopTimer = () => {
     clearInterval(this.timer);
     this.setState({ timerOn: false });
   };
+  // funcion que reinicia la cuanta regresiva.
   resetTimer = () => {
     if (this.state.timerOn === false) {
       this.setState({
@@ -51,6 +53,7 @@ class CountDown extends Component {
     }
   };
 
+  // Input que parametriza el tiempo de la cuanta regresiva.
   adjustTimer = input => {
     const { timerTime, timerOn } = this.state;
     if (!timerOn) {
