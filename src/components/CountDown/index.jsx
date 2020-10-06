@@ -8,11 +8,13 @@ import {
     ButtonStart,
     ButtonReset,
     ButtonStop
-} from './styles'
+} from './styles';
 
 class CountDown extends Component {
+
   state = {
     timerOn: false,
+    animateOn: false,
     timerStart: 0,
     timerTime: 0
   };
@@ -32,7 +34,6 @@ class CountDown extends Component {
       } else {
         clearInterval(this.timer);
         this.setState({ timerOn: false });
-        alert("Countdown ended");
       }
     }, 10);
   };
@@ -112,10 +113,11 @@ class CountDown extends Component {
         )}
         {timerOn === false &&
           (timerStart !== 0 && timerStart !== timerTime && timerTime !== 0) && (
-            <ButtonStart onClick={this.startTimer}>
-                Resume
-            </ButtonStart>
-
+           <div>
+               <ButtonStart onClick={this.startTimer}>
+                    Resume
+                </ButtonStart>
+           </div>
           )}
 
         {(timerOn === false || timerTime < 1000) &&

@@ -1,6 +1,7 @@
 import React  from 'react';
 import './App.css';
 import CountDown from './components/CountDown/index';
+import Animation from './components/Animation/index';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <header className="App-header">
         
         <CountDown/>
+        <Animation/>
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
